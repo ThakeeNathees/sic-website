@@ -159,7 +159,7 @@
             <div v-once v-for="(member, i) in board_members" :key="member.name" class="team-card">
                 <div class="flex fl-ac">
                     <div class="img-container">
-                        <img :src="`../res/board/${member['image_name']}`">
+                        <img :src="`./res/board/${member['image_name']}`">
                     </div>
                     <div>
                         <p class="job-title color-dpink">{{ member["job_title"] }}</p>
