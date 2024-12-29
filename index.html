@@ -6,7 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
     <script src="./js/vue-cdn@3.2.45.js"></script>
-    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="./css/style.css">
 
     <title>Social Impact Club</title>
 
@@ -66,23 +66,23 @@
             <!-- Statistics. -->
             <div id="stats" class="pos-relative text-center mg-t2 flex fl-ac fl-jsb">
                 <div>
-                    <h1>132</h1>
-                    <p class="color-gray">Destinations</p>
+                    <h1>{{stat_curr_destinations}}</h1>
+                    <p>Destinations</p>
                 </div>
                 <div class="vertical-line"></div>
                 <div>
-                    <h1>5000+</h1>
-                    <p class="color-gray">Sponsors</p>
+                    <h1>{{stat_curr_sponsors}}</h1>
+                    <p>Sponsors</p>
                 </div>
                 <div class="vertical-line"></div>
                 <div>
-                    <h1>85%</h1>
-                    <p class="color-gray">Goals Achieved</p>
+                    <h1>{{stat_curr_goals}}%</h1>
+                    <p>Goals Achieved</p>
                 </div>
                 <div class="vertical-line"></div>
                 <div>
-                    <h1>185</h1>
-                    <p class="color-gray">Countries</p>
+                    <h1>{{stat_curr_country}}</h1>
+                    <p>Countries</p>
                 </div>
             </div>
 
@@ -94,7 +94,7 @@
     <!-- No Scroll Image -->
     <div id="no-scroll-image" class="mg-t3">
         <div class="no-scroll-image-overlay"></div>
-        <div class="center" style="height: 100%; max-width: 1100px; margin: 0 auto;">
+        <div class="center" style="height: 100%; max-width: 1100px; margin: 0 auto; padding: 20px;">
             <p style="color: white; z-index: 10; font-size: 20px;">
                 Our Vision: <br><br>
                 Lorem ipsum dolor sit amet consectetur adipisicing elit. Consequuntur iusto mollitia cumque saepe
@@ -115,19 +115,15 @@
             <h1 class="mg-b1 text-heading" style="color: var(--color-purple)">Past Events</h1>
         </div>
 
-        <div id="event-cards" class="pos-relative grid grid-col-3 gap-2">
+        <div v-once id="event-cards" class="pos-relative grid grid-col-3 gap-2">
             <div v-for="(event, i) in events" :key="i" class="event-card" @click="openLink(event.link)">
                 <div class="img-container">
-                  <a :href="todo">
                     <img :src=" event.card_image || '' ">
-                  </a>
                 </div>
                 <div class="event-details">
-                  <a :href="todo" class="hover-underline">
-                    <h1 class="font-size-medium mg-b0"> {{ event.name }} </h1>
-                  </a>
-                  <div class="mg-t0 mg-b0 flex fl-jsb">
-                    <div class="flex fl-ac" style="color:var(--gray)">  
+                    <h1 class="color-purple"> {{ event.name }} </h1>
+                  <div class="mg-b0 flex fl-jsb">
+                    <div class="flex fl-ac">  
                       <div class="location-img pos-relative">
                         <svg xmlns="http://www.w3.org/2000/svg" class="ionicon" viewBox="0 0 512 512">
                           <path d="M256 48c-79.5 0-144 61.39-144 137 0 87 96 224.87 131.25 272.49a15.77 15.77 0 0025.5 0C304 409.89 400 272.07 400 185c0-75.61-64.5-137-144-137z"
@@ -135,7 +131,7 @@
                           <circle cx="256" cy="192" r="48" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="32"/>
                         </svg>
                       </div>
-                      <p class="color-gray font-weight-bolder"> {{ event.location }} </p>
+                      <p class="color-lpink-2"> {{ event.location }} </p>
                     </div>
                   </div>
                   <p class="event-info"> {{ event.description }} </p>
@@ -175,8 +171,15 @@
 
     <!-- Our Sponsors. -->
     <div id="our-sponsors" class="mg-t3 mg-b3 container text-center">
-        <h1>Our Sponsors</h1>
-        <p class="mg-t1 mg-b1 color-gray">Thes people helped us a log by giving money ig.</p>
+
+        <div class="text-center">
+            <h1 class="mg-t2 color-dpink font-size-small">WE HAVE</h1>
+            <h1 class="text-heading">
+                Our Sponsors
+            </h1>
+        </div>
+        <p class="mg-b1 color-lpink-2">Thes people helped us a log by giving money ig.</p>
+
         <div id="sponsors-grid" class="grid grid-col-3 gap-2">
           <!-- Logos are dowwnloaded from https://worldvectorlogo.com/ -->
           <img src="./res/images/sponsors/google-cloud-3.svg">
