@@ -17,10 +17,10 @@ const app = createApp({
             events: EVENTS,
 
             // TODO: Get from data.js
-            stat_destinations: 132,
-            stat_sponsors: 5000,
-            stat_goals: 85,
-            stat_country: 185,
+            stat_destinations: 134,
+            stat_sponsors: 9,
+            stat_goals: 10,
+            stat_country: 4,
 
             stat_curr_destinations: 0,
             stat_curr_sponsors: 0,
