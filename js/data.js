@@ -17,7 +17,7 @@ const BOARD_MEMBERS = [
     "name"      : "Yasiru Fernando",
     "image_name": "yasiru.jpg",
     "job_title" : "President",
-    "about"     : "Hi, I'm MR. Potato Head, an evil genious, I'm here to take over the world.",
+    "about"     : "A creative and driven individual passionate about fostering collaboration, empowering communities, and driving meaningful change, with a strong background in leadership, engineering, and social impact initiatives.",
   },
   {
     "name"      : "Hirusa Lastname",
@@ -41,11 +41,32 @@ const BOARD_MEMBERS = [
 
 EVENTS = [
   new Event(
+    "Arduino Workshop",
+    "./res/photos/st.claires.JPEG",
+    "St. CLaire's College, Wellawaththa",
+    "Introducing young minds to programming and robotics through hands-on workshops at St. Clare's School, empowering the next generation of innovators!",
+    "https://www.instagram.com/p/DFGB5CxhVQf/?utm_source=ig_web_copy_link&igsh=MzRlODBiNWFlZA==",
+  ),
+  new Event(
+    "Orphanage Visit 2",
+    "./res/photos/orphanage2.jpg",
+    "Shilpa Child Development Center",
+    "Spreading Christmas joy and creativity at the Shilpa Child Development Center through decorations, crafts, and gifts, making it a magical day for the kids!",
+    "https://www.instagram.com/p/DEPgH9ZPzoZ/?utm_source=ig_web_copy_link&igsh=MzRlODBiNWFlZA==",
+  ),
+  new Event(
+    "Elder's Home Visit 3",
+    "./res/photos/eldersvisit3.jpg",
+    "Agham Care Home",
+    "Bringing joy and warmth to the elders at Agham Care Home through heartfelt connections and meaningful moments.",
+    "https://www.instagram.com/p/DCPQ6J2zvlE/?utm_source=ig_web_copy_link&igsh=MzRlODBiNWFlZA==",
+  ),
+  new Event(
     "Orphenage Visit",
     "./res/photos/commitee.jpg",
-    "Vihara maha devi park",
-    "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Consectetur adipisci commodi consequuntur totam in itaqu.",
-    "https://www.instagram.com/p/DA3v3kZzPrq/?img_index=1",
+    "Vihara Maha Devi Park",
+    "Creating joy and wonder with the children of Shilpa Orphanage through an unforgettable day of exploration and togetherness!",
+    "https://www.instagram.com/p/DA3v3kZzPrq/?utm_source=ig_web_copy_link&igsh=MzRlODBiNWFlZA==",
   ),
   new Event(
     "Elder Home Visit",
